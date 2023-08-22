@@ -32,5 +32,5 @@ mixin: # object
     # dns-hijack:
     #   - 198.18.0.2:53 
     auto-route: true
-    #自动选择网卡 
+    #自动选择网卡开关
     auto-detect-interface: true 
