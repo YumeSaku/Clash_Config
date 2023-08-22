@@ -1,4 +1,5 @@
 mixin: # object
+#添加自定义DNS
   dns:
     enable: true
     enhanced-mode: redir-host
@@ -24,10 +25,12 @@ mixin: # object
     fallback-filter:
     geoip: true
     geoip-code: CN
+#TUN模式设置
   tun:
     enable: true
     stack: system
     dns-hijack:
       - 198.18.0.2:53 
-    auto-route: true 
+    auto-route: true
+    #自动选择网卡 
     auto-detect-interface: true 
