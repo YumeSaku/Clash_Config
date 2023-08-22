@@ -1,29 +1,29 @@
 mixin: # object
-  # dns:
-  #   enable: true
-  #   enhanced-mode: redir-host
-  #   listen: :53
-  #   default-nameserver:
-  #     - 210.5.56.145
-  #   nameserver:
-  #     - 223.5.5.5
-  #     - 114.114.114.114
-  #     - 8.8.8.8      
-  #   fallback:
-  #     - https://8888.google/dns-query
-  #     - https://1.0.0.1/dns-query
-  #     - https://dns.twnic.tw/dns-query
-  #     - https://doh.opendns.com/dns-query
-  #     - https://dns-nyc.aaflalo.me/dns-query
-  #     - https://dns.aa.net.uk/dns-query
-  #     - https://sg.adhole.org/dns-query
-  #     - https://kaitain.restena.lu/dns-query
-  #     - https://hydra.plan9-ns1.com/dns-query
-  #     - https://jp.tiar.app/dns-query
-  #     - https://doh.asia.dnswarden.com/adblock
-  #   fallback-filter:
-  #   geoip: true
-  #   geoip-code: CN
+  dns:
+    enable: true
+    enhanced-mode: redir-host
+    listen: :53
+    default-nameserver:
+      - 210.5.56.145
+    nameserver:
+      - 223.5.5.5
+      - 114.114.114.114
+      - 8.8.8.8      
+    fallback:
+      - https://8888.google/dns-query
+      - https://1.0.0.1/dns-query
+      - https://dns.twnic.tw/dns-query
+      - https://doh.opendns.com/dns-query
+      - https://dns-nyc.aaflalo.me/dns-query
+      - https://dns.aa.net.uk/dns-query
+      - https://sg.adhole.org/dns-query
+      - https://kaitain.restena.lu/dns-query
+      - https://hydra.plan9-ns1.com/dns-query
+      - https://jp.tiar.app/dns-query
+      - https://doh.asia.dnswarden.com/adblock
+    fallback-filter:
+    geoip: true
+    geoip-code: CN
   tun:
     enable: true
     stack: system
