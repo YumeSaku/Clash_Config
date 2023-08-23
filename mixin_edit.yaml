@@ -9,7 +9,7 @@ mixin: # object
     nameserver:
       - 223.5.5.5
       - 114.114.114.114
-      - 8.8.8.8      
+      - 8.8.8.8
     fallback:
       - https://8888.google/dns-query
       - https://1.0.0.1/dns-query
@@ -30,7 +30,7 @@ mixin: # object
     enable: true
     stack: system
     # dns-hijack:
-    #   - 198.18.0.2:53 
+    #   - 198.18.0.2:53
     auto-route: true
     #自动选择网卡开关
-    auto-detect-interface: true 
+    auto-detect-interface: true
