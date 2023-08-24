@@ -2,7 +2,7 @@ mixin: # object
 #添加自定义DNS
   dns:
     enable: true
-    enhanced-mode: redir-host
+    enhanced-mode: fake-ip
     listen: :53
     default-nameserver:
       - 210.5.56.145
