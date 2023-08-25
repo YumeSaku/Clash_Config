@@ -4,12 +4,13 @@ mixin: # object
     enable: true
     enhanced-mode: fake-ip
     listen: :53
-    default-nameserver:
-      - 210.5.56.145
     nameserver:
       - 223.5.5.5
       - 114.114.114.114
       - 8.8.8.8
+      - tls://dns.rubyfish.cn:853 # DNS over TLS
+      - https://1.1.1.1/dns-query # DNS over HTTPS
+      - dhcp://en0 # 来自 dhcp 的 dns   
     fallback:
       - https://8888.google/dns-query
       - https://1.0.0.1/dns-query
@@ -23,14 +24,26 @@ mixin: # object
       - https://jp.tiar.app/dns-query
       - https://doh.asia.dnswarden.com/adblock
     fallback-filter:
+    fake-ip-filter:
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - "*.n.n.srv.nintendo.net"
+    - +.stun.playstation.net
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    - WORKGROUP
     geoip: true
     geoip-code: CN
 #TUN模式设置
   tun:
     enable: true
     stack: system
-    # dns-hijack:
-    #   - 198.18.0.2:53
+    dns-hijack:
+      - 198.18.0.2:53
     auto-route: true
     #自动选择网卡开关
     auto-detect-interface: true
